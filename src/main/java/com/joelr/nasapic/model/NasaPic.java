@@ -112,13 +112,13 @@ public class NasaPic {
     public java.lang.String toString(){
         return  System.lineSeparator() +
                 "ɴᴀꜱᴀ ɪᴍᴀɢᴇ ᴏꜰ ᴛʜᴇ ᴅᴀʏ" + System.lineSeparator() +
-                // unicode for italicized "INFORMATION"
+                // unicode characters for italicized "INFORMATION"
                 "\uD835\uDE10\uD835\uDE15\uD835\uDE0D\uD835\uDE16\uD835\uDE19\uD835" +
                 "\uDE14\uD835\uDE08\uD835\uDE1B\uD835\uDE10\uD835\uDE16\uD835\uDE15" + System.lineSeparator() +
                 "copyRight : " + copyRight + System.lineSeparator() +
                 "date : " + date + System.lineSeparator() +
                 "explanation : " + explanation + System.lineSeparator() +
-                "hdurl : " + hdurl + System.lineSeparator() +
+                "hdUrl : " + hdurl + System.lineSeparator() +
                 "mediaType : " + mediatype + System.lineSeparator() +
                 "serviceVersion : " + serviceVersion + System.lineSeparator() +
                 "title : " + title + System.lineSeparator() +

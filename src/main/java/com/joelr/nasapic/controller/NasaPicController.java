@@ -18,7 +18,7 @@ public class NasaPicController {
        } catch (RestClientResponseException e){
            throw new RuntimeException("Could not connect to: " + BASE_URL);
        } catch (ResourceAccessException e){
-           throw new RuntimeException("forgot. need to fix");
+           throw new RuntimeException(" ");         // need to update message and exception type
        }
        return nasaPic;
    }

@@ -1,11 +1,11 @@
 package com.joelr.nasapic.ImageViewer;
 
+import com.joelr.nasapic.controller.NasaPicController;
 import com.joelr.nasapic.model.NasaPic;
 
 import java.awt.*;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URL;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -15,8 +15,10 @@ import javax.swing.JPanel;
 
 public class ImageViewer extends JFrame {
 
-    private NasaPic nasaPic = new NasaPic();
-    private String imageUrl = nasaPic.getUrl();
+    private final NasaPicController nasaPicController = new NasaPicController();
+    private final NasaPic nasaPic = nasaPicController.getNasaPic();
+    private final String imageUrl = nasaPic.getUrl();
+
 
     public ImageViewer() {
         super("NASA ASTRONOMY PICTURE OF THE DAY");
@@ -36,18 +38,13 @@ public class ImageViewer extends JFrame {
 
         Image image = null;
         URL url = null;
-        URI uri = null;
-        try {
-//            url = new URL("https://i.imgur.com/b75ZXR0.jpg");   // <- Works
-              url = new URL("https://apod.nasa.gov/apod/image/2308/ElephantTrunkBatSquidSeahorse1024.jpg");
 
-//            uri = url.toURI();
-//            url = new URL(uri.getPath());         // example hmm need to look into URI more, see API notes on hover
-//            url = new URL(nasaPic.getUrl());                      // <- hmmmm needs work (bad url)
-//            url = new URL(imageUrl);                              // <- doesnt work (bad url)
+        try {
+//          url = new URL("https://i.imgur.com/b75ZXR0.jpg"); // placeholder image
+            url = new URL(imageUrl);
             image = ImageIO.read(url);
         } catch (MalformedURLException ex) {
-            System.out.println("URL is bad");
+            System.out.println("URL is bad or null");
         } catch (IOException ex) {
             System.out.println("Cannot load image");
         }
@@ -56,7 +53,6 @@ public class ImageViewer extends JFrame {
         JLabel nasaImage = new JLabel(new ImageIcon(image));
         panel.add(nasaImage, BorderLayout.CENTER);
         this.getContentPane().add(panel, BorderLayout.CENTER);
-//        this.pack();          // does not resize
         this.setVisible(true);
     }
 
