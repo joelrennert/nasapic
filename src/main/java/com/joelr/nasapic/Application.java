@@ -33,7 +33,7 @@ public class Application {
 	private static final NasaPicController nasaPicController = new NasaPicController();
 	private static ImageViewer imageViewer = null;
 
-	public static void main(String[] args)  {
+	public static void main(String[] args) {
 		System.setProperty("java.awt.headless", "false");
 		SpringApplication.run(Application.class, args);
 

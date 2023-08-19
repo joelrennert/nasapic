@@ -1,6 +1,7 @@
 package com.joelr.nasapic.model;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class NasaPic {
 

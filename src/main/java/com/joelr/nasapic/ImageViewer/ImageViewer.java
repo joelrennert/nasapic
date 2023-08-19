@@ -29,11 +29,12 @@ public class ImageViewer extends JFrame {
         this.setResizable(false);
         this.setVisible(true);
         this.pack();
-        this.setSize(900, 600);
+        this.setSize(1000, 900);
         this.setLocationRelativeTo(null);
 
         // new panel
         JPanel panel = new JPanel();
+        panel.setBackground(Color.black);
         panel.setLayout(new BorderLayout());
 
         Image image = null;
@@ -54,6 +55,7 @@ public class ImageViewer extends JFrame {
         panel.add(nasaImage, BorderLayout.CENTER);
         this.getContentPane().add(panel, BorderLayout.CENTER);
         this.setVisible(true);
+
     }
 
 }
