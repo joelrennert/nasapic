@@ -15,10 +15,10 @@ public class NasaPicController {
        NasaPic nasaPic = null;
        try{
            nasaPic = restTemplate.getForObject(BASE_URL, NasaPic.class);
-       } catch (RestClientResponseException e){
-           throw new RuntimeException("Error " + e.getRawStatusCode());
        } catch (ResourceAccessException e){
            throw new RuntimeException("Could not connect to: " + BASE_URL);         // need to update message and exception type
+       } catch (RestClientResponseException e){
+           throw new RuntimeException("Error " + e.getRawStatusCode());
        }
        return nasaPic;
    }

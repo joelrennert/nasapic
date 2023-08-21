@@ -6,9 +6,6 @@ import com.joelr.nasapic.model.NasaPic;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
-
 /*
 		███╗   ██╗ █████╗ ███████╗ █████╗     ██╗███╗   ███╗ █████╗  ██████╗ ███████╗
 		████╗  ██║██╔══██╗██╔════╝██╔══██╗    ██║████╗ ████║██╔══██╗██╔════╝ ██╔════╝
@@ -40,6 +37,5 @@ public class Application {
 		NasaPic nasaPic = nasaPicController.getNasaPic();
 		System.out.println(nasaPic.toString());
 		imageViewer = new ImageViewer();
-
 	}
 }

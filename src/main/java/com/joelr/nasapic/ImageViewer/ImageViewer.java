@@ -19,10 +19,8 @@ public class ImageViewer extends JFrame {
     private final NasaPic nasaPic = nasaPicController.getNasaPic();
     private final String imageUrl = nasaPic.getUrl();
 
-
     public ImageViewer() {
         super("NASA ASTRONOMY PICTURE OF THE DAY");
-
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.getContentPane().setLayout(new BorderLayout());
         this.setBackground(Color.black);
@@ -41,7 +39,7 @@ public class ImageViewer extends JFrame {
         URL url = null;
 
         try {
-//          url = new URL("https://i.imgur.com/b75ZXR0.jpg"); // placeholder image
+//          url = new URL("https://i.imgur.com/b75ZXR0.jpg"); // hard-coded placeholder image
             url = new URL(imageUrl);
             image = ImageIO.read(url);
         } catch (MalformedURLException ex) {

@@ -1,6 +1,7 @@
 package com.joelr.nasapic.model;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class NasaPic {
 
@@ -115,13 +116,15 @@ public class NasaPic {
                 // unicode characters for italicized "INFORMATION"
                 "\uD835\uDE10\uD835\uDE15\uD835\uDE0D\uD835\uDE16\uD835\uDE19\uD835" +
                 "\uDE14\uD835\uDE08\uD835\uDE1B\uD835\uDE10\uD835\uDE16\uD835\uDE15" + System.lineSeparator() +
-                "copyRight : " + copyRight + System.lineSeparator() +
+                "title : " + title + System.lineSeparator() +
                 "date : " + date + System.lineSeparator() +
                 "explanation : " + explanation + System.lineSeparator() +
+                "copyRight : " + copyRight + System.lineSeparator() +
+                "url : " + url + System.lineSeparator() +
                 "hdUrl : " + hdurl + System.lineSeparator() +
                 "mediaType : " + mediatype + System.lineSeparator() +
-                "serviceVersion : " + serviceVersion + System.lineSeparator() +
-                "title : " + title + System.lineSeparator() +
-                "url : " + url + System.lineSeparator();
+                "serviceVersion : " + serviceVersion + System.lineSeparator();
+
     }
+
 }
