@@ -8,7 +8,7 @@ import com.joelr.nasapic.model.NasaPic;
 
 public class NasaPicController {
 
-    public static String BASE_URL = "https://api.nasa.gov/planetary/apod?api_key=w93h6dyJQr0dI4OIh0bMQtHh3lHxUwYYpbxhjrlL";
+    public static String BASE_URL = "https://api.nasa.gov/planetary/apod?api_key=" + System.getenv("apiKey");
     private RestTemplate restTemplate = new RestTemplate();
 
     public NasaPic getNasaPic(){
